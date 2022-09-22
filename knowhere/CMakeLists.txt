@@ -122,6 +122,7 @@ if (KNOWHERE_SUPPORT_NSG)
 endif ()
 
 set(depend_libs
+        faiss
         pthread
         knowhere_utils
         )
