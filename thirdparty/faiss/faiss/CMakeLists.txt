@@ -91,7 +91,7 @@ set(FAISS_SRC
   utils/Heap.cpp
   utils/WorkerThread.cpp
   utils/distances.cpp
-  utils/distances_simd.cpp
+  # utils/distances_simd.cpp
   utils/extra_distances.cpp
   utils/hamming.cpp
   utils/partitioning.cpp
@@ -199,7 +199,7 @@ set(FAISS_HEADERS
   utils/quantize_lut.h
   utils/random.h
   utils/simdlib.h
-  utils/simdlib_avx2.h
+  # utils/simdlib_avx2.h
   utils/simdlib_emulated.h
   utils/simdlib_neon.h
   utils/substructure-inl.h
