@@ -52,6 +52,19 @@ void hook_fvec(std::string& simd_type) {
 #else
     simd_type = "REF";
 #endif
+#ifdef __linux__
+    bool cpu_support_avx512() {
+        return false;
+    }
+
+    bool cpu_support_avx2() {
+        return false;
+    }
+
+    bool cpu_support_sse4_2() {
+        return false;
+    }
+#endif
 }
 
 } // namespace faiss
