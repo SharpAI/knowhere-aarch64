@@ -437,8 +437,8 @@ void binary_distance_knn_hc(
     case METRIC_Jaccard: {
 #ifdef __linux__
         if (cpu_support_avx2() && ncodes > 64) {
-            binary_distance_knn_hc<C, faiss::JaccardComputerAVX2>
-                    (ncodes, ha, a, b, nb, bitset);
+            // binary_distance_knn_hc<C, faiss::JaccardComputerAVX2>
+            //         (ncodes, ha, a, b, nb, bitset);
         } else
 #endif
         {
@@ -468,8 +468,8 @@ void binary_distance_knn_hc(
     case METRIC_Hamming: {
 #ifdef __linux__
         if (cpu_support_avx2() && ncodes > 64) {
-            binary_distance_knn_hc<C, faiss::HammingComputerAVX2>
-                    (ncodes, ha, a, b, nb, bitset);
+            // binary_distance_knn_hc<C, faiss::HammingComputerAVX2>
+            //         (ncodes, ha, a, b, nb, bitset);
         } else
 #endif
         {
@@ -568,8 +568,8 @@ void binary_range_search(
         case METRIC_Jaccard: {
 #ifdef __linux__
             if (cpu_support_avx2() && code_size > 64) {
-                binary_range_search<C, T, faiss::JaccardComputerAVX2>
-                    (a, b, na, nb, radius, code_size, res, bitset);
+                // binary_range_search<C, T, faiss::JaccardComputerAVX2>
+                //     (a, b, na, nb, radius, code_size, res, bitset);
             } else
 #endif
             {
@@ -604,8 +604,8 @@ void binary_range_search(
         case METRIC_Hamming: {
 #ifdef __linux__
             if (cpu_support_avx2() && code_size > 64) {
-                binary_range_search<C, T, faiss::HammingComputerAVX2>
-                    (a, b, na, nb, radius, code_size, res, bitset);
+                // binary_range_search<C, T, faiss::HammingComputerAVX2>
+                //     (a, b, na, nb, radius, code_size, res, bitset);
             } else
 #endif
             {
